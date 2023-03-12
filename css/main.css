@@ -87,7 +87,14 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.content-wrapper {
+  width: 90%;
+  margin: 50px 0;
+/*****which content wrapper is this?, why is it giving all content wrappers 50px of margin*****/
+}
+
   /*---------Base Header - Footer Styles ---------*/
+
 header, 
 footer {
   display: flex;
@@ -96,11 +103,22 @@ footer {
   flex-flow: row wrap;
 }
 
+header {
+  padding: 15px 0;
+}
+
 header .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 0;
+}
+
+.header-divider {
+  margin: 10px 0 20px 0; /*****why is this a margin and not padding?*****/
+  height: 1px; /*****why does this need height?*****/
+  width: 100%;
 }
 
 header nav {
@@ -108,14 +126,39 @@ header nav {
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
+  width: 60%;
 /****why does header nav have row wrap?****/
 }
 
 header nav ul {
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
+footer {
+  flex-direction: column;
+/****why is this a column?*****/
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .content-wrapper {
+  width: 55%;
+  margin: 50px 0;
+}
+
+footer .contact {
+  margin-bottom: 50px;
+}
+
+/*****THIS ISN'T IN THE ANSWER KEY-WHY???
+footer h4 {
+  margin: 20px 0;
+}
+*******************************************/
 footer .social-icons {
   display: flex;
   justify-content: space-around;
@@ -126,6 +169,10 @@ footer .social p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .copyright {
+  margin: 20px 0;
 }
 
 /*------Mobile Styles - Homepage ------*/
@@ -148,12 +195,32 @@ aside {
   flex-flow: row wrap;
 }
 
+/*****WHY ISN'T THIS IN THE ANSWER KEY*****
+aside h3 {
+  margin: 20px 0;
+}
+
+aside form {
+  margin: 20px 0;
+  padding: 1em 1 em;
+}
+*******************************************/
+
 /* Features */
 
 .features {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.features h2 {
+  margin-bottom: 60px;
+}
+
+.features article {
+  width: 63%;
+  margin: 30px 0;
 }
 
 .features .features-items {
@@ -163,12 +230,31 @@ aside {
   flex-flow: row wrap;
 }
 
+/******not in answer key
+.features .fontawesome-icon {
+  margin: 30px 0 40px 0;
+}
+******/
+
+.features p {
+  margin: 0;
+}
+
 /* Reviews */
 
-#reviews {
+.reviews {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+}
+
+.reviews h2 {
+  margin-bottom: 40px;
+}
+
+.reviews h3 {
+  width:55%;
+  margin: 20px 0;
 }
 
 /* ==========================================================================
@@ -189,6 +275,10 @@ aside {
   flex-flow: row wrap;
 }
 
+.contact-content p {
+  margin: 0
+}
+
 /* ==========================================================================
    FAQ Page
    ========================================================================== */
@@ -205,6 +295,15 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  margin: 50px 0 0 0;
+}
+
+.faq h2 {
+  margin-bottom: 40px;
+}
+
+.faq-contant {
+  margin-bottom: 50px;
 }
 
 /* ==========================================================================
