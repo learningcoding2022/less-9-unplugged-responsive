@@ -394,15 +394,151 @@ aside form {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
+@media only screen and (min-width: 768px) {
+  /*Tablet Styles here*/
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+  /*General Styles*/
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  /*Header*/
+
+  header {
+    margin: 33px 0;
+    justify-content: space-around; 
+  }
+
+  header .content-wrapper {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  header nav {
+    width: 20%;
+  }
+
+  header nav ul {
+    justify-content: space-between;
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  /*Hero Area*/
+
+  /*Aside*/
+  aside .content-wrapper {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  /***why is this row wrap- the elements aren't wrapper so wouldn't it be no wrap?***/
+  }
+
+  aside .content-wrapper .form-description,
+  aside .content-wrapper .form {
+    width: 40%;
+    margin: 0;
+  }
+
+  /*Features*/
+
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+  /***haven't used flex-basis before***/
+  }
+
+  .features .features-item-description {
+    width: 50%;
+  /***why isn't this width 60%, where is this number coming from?***/
+  }
+
+  /*Reviews*/
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .reviews article div {
+    width: 49%;
+  }
+
+  .footer .content-wrapper { 
+    width: 65%; 
+  /***how is the 65% and not 55%- how do you figure this out?***/
+    margin: 100px 0;
+  }
+
+  .footer-content {
+  /***what about width? why no width?***/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer .contact {
+    margin-bottom: 0;
+  }
+
+  footer .copyright {
+    width: 100%;
+  /***why isn't this 30% and what about justify-content: center?***/
+  }
+
+  /* ==========================================================================
+   About Page
+  ========================================================================== */
+
+  .mission-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .mission-content p {
+    width: 45%;
+  }
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+  /***how is this 80% and not 60% since it is a content wrapper just for the h2***/
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+    /* ==========================================================================
+   FAQ Page
+  ========================================================================== */
+
+  .faq .content-wrappper {
+    justify-content: space-between;
+  /***why not display and align items?***/
+  }
+
+  .faq-content {
+    flex-basis: 45%;
+  /***why don't I need display and align items?***/
+  }
+
+  .faq h2 {
+    width: 100%;
+  }
+  }
+
+@media only screen and (min-width: 1200px) {
+  /*Desktop Styles here*/
 }
 
 /* ==========================================================================
