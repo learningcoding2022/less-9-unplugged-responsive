@@ -84,15 +84,65 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
+   Author's custom styles (for mobile)
    ========================================================================== */
+
+/*General Styles*/
+
+html{
+  font-size: 16px;
+}
+
+body {
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+}
+
+ul, 
+ol {
+  list-style-type: none;
+
+}
+
+a {
+  color: #e2e3ed;
+  text-decoration: none;
+}
+
+/***what about h1?***/
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.875em;
+}
+
+h3,
+h4 {
+  font-family: 'Poppins', sans-serif;
+  margin: 20px 0;
+  font-size: 1.125em;
+}
+
+p {
+  font-size: .875em;
+  line-height: 1.285;
+}
+
+address {
+  font-style: normal;
+}
 
 .content-wrapper {
   width: 90%;
   margin: 50px 0;
+
 }
 
-  /*---------Base Header - Footer Styles ---------*/
+/***what about the image and figure***/
+
+
+/*---------Base Header - Footer Styles ---------*/
 
 header, 
 footer {
@@ -107,17 +157,17 @@ header {
 }
 
 header .content-wrapper {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
 }
 
 .header-divider {
-  margin: 10px 0 20px 0; /*****why is this a margin and not padding?*****/
-  height: 1px; /*****why does this need height?*****/
   width: 100%;
+  margin: 10px 0 20px 0;
+  height: 1px; /*****why does this need height?*****/
 }
 
 header nav {
@@ -134,10 +184,12 @@ header nav ul {
   justify-content: space-around;
   width: 100%;
 }
+/***why is the width 100%? and not 60%***/
 
 footer {
   flex-direction: column;
 }
+/***why aren't there flex properties?***/
 
 footer p {
   margin: 0;
@@ -147,23 +199,23 @@ footer .content-wrapper {
   width: 55%;
   margin: 50px 0;
 }
+/***why about these?
+  display: flex;
+  justify-content: center;
+  align-items: center;
+***/
 
 footer .contact {
   margin-bottom: 50px;
 }
 
-/*****THIS ISN'T IN THE ANSWER KEY-WHY?
-footer h4 {
-  margin: 20px 0;
-}
-*******************************************/
 footer .social-icons {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-footer .social p {
+footer .social-icons p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,8 +224,15 @@ footer .social p {
 footer .copyright {
   margin: 20px 0;
 }
+/***why doesn't the footer .copyright have flex properties***/
 
-/*------Mobile Styles - Homepage ------*/
+/*****THIS ISN'T IN THE ANSWER KEY-WHY?
+footer h4 {
+  margin: 20px 0;
+}
+*****/
+
+/*-----------------------Mobile Styles - Homepage ------*/
 
 /* Hero Area */
 
@@ -202,7 +261,7 @@ aside form {
   margin: 20px 0;
   padding: 1em 1 em;
 }
-*******************************************/
+***/
 
 /* Features */
 
@@ -275,11 +334,6 @@ aside form {
 
 .contact-content p {
   margin: 0
-}
-
-/*why not
-.contact-section {
-justify-items: space-between
 }
 
 /* ==========================================================================
@@ -483,7 +537,6 @@ justify-items: space-between
   /***what about width? why no width?***/
     display: flex;
     justify-content: space-between;
-  /* why is this space-between and not space-around?*/
     align-items: center;
   }
 
@@ -526,10 +579,6 @@ justify-items: space-between
    FAQ Page
   ========================================================================== */
 
-  header {
-    padding: 15px 0;
-  }
-  
   .faq .content-wrappper {
     justify-content: space-between;
   /***why not display and align items?***/
@@ -548,6 +597,9 @@ justify-items: space-between
 @media only screen and (min-width: 1200px) {
   /*Desktop Styles here*/
 
+  header {
+    padding: 15px 0;
+  }
   .content-wrapper {
     max-width: 960px;
   }
@@ -585,6 +637,7 @@ justify-items: space-between
   }
 
   /*Reviews*/
+
   /*why not this?
   .reviews article {
     display: flex;
@@ -601,7 +654,8 @@ justify-items: space-between
    About Page
   ========================================================================== */
 
-  .mission h2, .contact-section .content-wrapperh2 {
+  .mission h2, 
+  .contact-section .content-wrapperh2 {
     width: 95%;
   }
 
