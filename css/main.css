@@ -15,6 +15,7 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
+  /***where did the line-height come from?***/
 }
 
 /*
@@ -96,6 +97,7 @@ html{
 body {
   font-size: 1em;
   font-family: 'Open Sans', sans-serif;
+  color: #e2e3ed;
   text-align: left;
 }
 
@@ -110,11 +112,20 @@ a {
   text-decoration: none;
 }
 
-/***what about h1?***/
+/*why no h1 here?
+h1 {
+  font-size: 2.25em;
+  line-height: 43px;
+  font-weight: 500;
+  text-align: left;
+}
+*/
 
 h2 {
   font-family: 'Poppins', sans-serif;
   font-size: 1.875em;
+  font-weight: 500;
+  /*text-align: left;*/
 }
 
 h3,
@@ -122,6 +133,8 @@ h4 {
   font-family: 'Poppins', sans-serif;
   margin: 20px 0;
   font-size: 1.125em;
+  font-weight: 500;
+  /*text-align: left;*/
 }
 
 p {
@@ -146,6 +159,7 @@ address {
 
 header, 
 footer {
+  background-color: #202322;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,17 +179,22 @@ header .content-wrapper {
 }
 
 .header-divider {
+  background-color: #3a3a3a;
   width: 100%;
   margin: 10px 0 20px 0;
   height: 1px; /*****why does this need height?*****/
 }
 
 header nav {
+  width: 60%;
+  font-size: 1.125em;
+  font-weight: 700;
+  text-transform: uppercase;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-flow: row wrap;
-  width: 60%;
+
 /****why does header nav have row wrap?****/
 }
 
@@ -186,7 +205,12 @@ header nav ul {
 }
 /***why is the width 100%? and not 60%***/
 
+header nav ul li {
+  font-size: 1.125em;
+}
+
 footer {
+  text-align: center;
   flex-direction: column;
 }
 /***why aren't there flex properties?***/
@@ -199,14 +223,13 @@ footer .content-wrapper {
   width: 55%;
   margin: 50px 0;
 }
-/***why about these?
-  display: flex;
-  justify-content: center;
-  align-items: center;
-***/
 
 footer .contact {
   margin-bottom: 50px;
+  /*why not?
+  font-style: normal;
+  text-align: center;
+  */
 }
 
 footer .social-icons {
@@ -243,25 +266,48 @@ footer h4 {
 /*why does this section have row wrap?*/
 }
 
+.hero-area h1 {
+  font-size: 2.25em;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500; 
+  line-height: 1.2; 
+}
+
 /* Aside */
 
 aside {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
 }
 
-/*****WHY ISN'T THIS IN THE ANSWER KEY*****
-aside h3 {
-  margin: 20px 0;
+aside .form {
+  margin-top: 30px;
 }
-
-aside form {
-  margin: 20px 0;
-  padding: 1em 1 em;
+ 
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
 }
-***/
+ 
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /* Features */
 
@@ -287,19 +333,15 @@ aside form {
   flex-flow: row wrap;
 }
 
-/******not in answer key
-.features .fontawesome-icon {
-  margin: 30px 0 40px 0;
-}
-******/
-
 .features p {
+  text-align: center;
   margin: 0;
 }
 
 /* Reviews */
 
 .reviews {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -307,6 +349,7 @@ aside form {
 
 .reviews h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 .reviews h3 {
@@ -319,6 +362,7 @@ aside form {
    ========================================================================== */
 
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,6 +370,7 @@ aside form {
 }
 
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -341,6 +386,7 @@ aside form {
    ========================================================================== */
 
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,19 +394,24 @@ aside form {
 }
 
 .faq .content-wrapper {
+  margin: 50px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 50px 0 0 0;
 }
 
 .faq h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 
 .faq-content {
   margin-bottom: 50px;
+}
+
+.faq-content h4 {
+  line-height: 1.333;
 }
 
 /* ==========================================================================
@@ -459,17 +510,39 @@ aside form {
     max-width: 640px;
     margin: 100px 0;
   }
+  /*why no h1 again?
+  h1 {
+    font-size: 3em;
+    line-height: 48px;
+  }
+  */
+
+  h2 {
+    font-size: 2.25em;
+    line-height: 1.333;
+    /*why isn't line-height 48px?*/
+  }
+
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    /*why isn't line-height 30px?*/
+  }
 
   /*Header*/
 
   header {
-    margin: 33px 0;
     justify-content: space-around; 
+    padding: 33px 0;
   }
 
   header .content-wrapper {
     width: 100%;
     justify-content: space-between;
+  }
+
+  header figure {
+    width: 30%;
   }
 
   header nav {
@@ -485,6 +558,12 @@ aside form {
   }
 
   /*Hero Area*/
+
+  .hero-area h1 {
+    font-size: 3em;
+    line-height: 1;
+    margin: 0;
+}
 
   /*Aside*/
   aside .content-wrapper {
@@ -502,6 +581,10 @@ aside form {
   }
 
   /*Features*/
+
+  .features h2 {
+    margin-bottom: 20px;
+  }
 
   .features article {
     display: flex;
@@ -523,25 +606,44 @@ aside form {
     justify-content: space-between;
   }
 
+  .reviews h2 {
+    width: 85%;
+  }
+
   .reviews article div {
     width: 49%;
   }
 
-  .footer .content-wrapper { 
+  .reviews h3 {
+    width: 75%;
+    margin: 0;
+  }
+  /* Footer */
+  footer .content-wrapper { 
     width: 65%; 
   /***how is the 65% and not 55%- how do you figure this out?***/
     margin: 100px 0;
   }
 
-  .footer-content {
+  footer .footer-content {
   /***what about width? why no width?***/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
   }
 
-  .footer .contact {
+  footer .contact {
     margin-bottom: 0;
+  }
+
+  footer .contact h4 {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+  }
+
+  footer p {
+    line-height: 1.285;
   }
 
   footer .copyright {
@@ -575,6 +677,10 @@ aside form {
     align-items: flex-start;
   }
 
+  .contact-content h4 {
+    font-size: 1.5em;
+  }
+
     /* ==========================================================================
    FAQ Page
   ========================================================================== */
@@ -592,7 +698,13 @@ aside form {
   .faq h2 {
     width: 100%;
   }
+
+  .faq h4, 
+  .faq p {
+    font-size: .875em;
+    line-height: 1.125px;
   }
+}
 
 @media only screen and (min-width: 1200px) {
   /*Desktop Styles here*/
@@ -604,9 +716,24 @@ aside form {
     max-width: 960px;
   }
 
+  h2 {
+    font-size: 2.25em;
+  }
+  
+  h3, 
+  h4 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+    line-height: 1.333;
+  }
+
   /*Hero Area*/
   .hero-area h1 {
     width: 60%; /*why isn't this 70%?*/
+    font-size: 3.75em;
   }
 
   /*Aside*/
@@ -617,6 +744,10 @@ aside form {
   aside .content-wrapper .form-description,
   aside .content-wrapper .form {
     width: 30%;
+  }
+
+  .form-description p {
+    font-size: 1.125em;
   }
 
   /*Features*/
@@ -630,24 +761,18 @@ aside form {
     flex-basis: 33%;
   }
 
-  /*why not this....
-  .features .features-item-description {
-    width: 20% or 33%
-  */
-  }
-
   /*Reviews*/
 
-  /*why not this?
-  .reviews article {
-    display: flex;
-    justify-content: space-around;
-    margin: 50px;
-  }*/
+  .reviews h2 {
+    padding-bottom: 50px;
+  }
 
   .reviews article div {
     width: 42%;
-  /*how do you get this number?*/
+  }
+
+  footer h4 {
+    font-size: 1.875em;
   }
 
   /* ==========================================================================
@@ -655,8 +780,13 @@ aside form {
   ========================================================================== */
 
   .mission h2, 
-  .contact-section .content-wrapperh2 {
+  .contact-section .content-wrapper h2 {
     width: 95%;
+    font-size: 3em;
+  }
+
+  .contact-content h4 {
+    font-size: 1.875em;
   }
 
 
@@ -666,6 +796,13 @@ aside form {
 
   .faq h2 {
     width: 100%;
+    font-size: 3em;
+  }
+
+  .faq h4, 
+  .faq p {
+    font-size: 1.125em;
+    line-height: 1;
   }
 
   /*what about space-between for the footer?*/
