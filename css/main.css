@@ -393,6 +393,22 @@ input[type=button] {
   flex-flow: row wrap;
 }
 
+.map figure {
+  position: relative;/*allows you to set the iframe to absolute*/
+  padding-bottom: 125%;/*not really about padding; it is setting up the relationship between the height and width of the map*/
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+}
+
+.map iframe {
+  position: absolute;
+  top: 0; /*this means the map is flush with the top of the div*/
+  left: 0; /* this means the map is flush with the map container div*/
+  width: 100%;
+  height: 100%;
+}
+
 .contact-section {
   background-color: #2a423a;
   display: flex;
@@ -822,7 +838,6 @@ input[type=button] {
     /* ==========================================================================
    FAQ Page
   ========================================================================== */
-
   .faq h2 {
     width: 100%;
     font-size: 3em;
@@ -833,6 +848,7 @@ input[type=button] {
     font-size: 1.125em;
     line-height: 1;
   }
+}
 
   /*what about space-between for the footer?*/
 
