@@ -216,6 +216,7 @@ header nav ul {
   display: flex;
   justify-content: space-around;
   width: 100%;
+  padding-left: 0;
 }
 /***why is the width 100%? and not 60%***/
 
